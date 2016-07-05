@@ -104,17 +104,17 @@ test_results_short.txt – shortened version of results of the analysis. Format 
 		[identifier of strain]
 		 [identifier of genetic marker] [number of positions in genetic marker that are covered by metagenomic reads]
 		  number of reads: [number of reads that are mapped with genetic marker]
-		  detected val. pos.: [list of positions in genetic marker, that are essential for 				distinguishing it from other homogeneous genetic markers and are covered by metagenomic reads]
+		  detected val. pos.: [list of positions in genetic marker, that are essential for distinguishing it from other homogeneous genetic markers and are covered by metagenomic reads]
 
 gene_matrix.txt – file represent distinguishability of genetic markers based of their coverage by 		metagenomic reads.  Distinguishability is written in form of matrix, where each column 			and each string represent one of detected genetic markers. If element a(i,j) is 1 then i’th 			genetic marker (in i’th string) is indistinguishable from j’th genetic marker (in j’th 			column), 0 means that it is distinguishable. Format of the file is the following:
 
 		[list of genetic markers]
-		[martix of distinguishability, columns are numerated from left to the right, strings are 			numerated from top the down]
+		[martix of distinguishability, columns are numerated from left to the right, strings are numerated from top the down]
 
 strain_matrix.txt – file represents distinguishability of strains based on coverage of their genetic 		markers. As previously, distinguishability is written in form of matrix, where each 			column and each string represent one of detected strains. If element a(i,j) is 1 then i’th 			strain (in i’th string) is indistinguishable from j’th strain (in j’th column), 0 means that it 		is distinguishable. Format of the file is the following:
 
 		[list of strains]
-		[martix of distinguishability, columns are numerated from left to the right, strings are 			numerated from top the down]
+		[martix of distinguishability, columns are numerated from left to the right, strings are numerated from top the down]
 
 privilege.txt – summary of distinguishability of strains. All strains are grouped in such a way, 			that every strain in a group is either distinguishable from all other and at least one more 			strain in the group is indistinguishable from the first one or this strain is 					indistinguishable from at least one strain in the group. So strains are grouped in a way 			that in every group distinguishable strains are linked with some strain, that can not be 			distinguished from the first once. Every strain is assigned with a number, that shows 			number of strains, from which that particular strain can not be destinguished. We call 			that number “privilege”. The best detected strains have 0 value of privilege. The file 			contains described above groups with values of privilege. Format of the file is the 			following: 
 
