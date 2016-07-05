@@ -124,4 +124,4 @@ privilege.txt – summary of distinguishability of strains. All strains are grou
 summary.txt – summary of analyses. File contains data of privilege values and additional 			information about number of detected genes and their coverage. Format of the file is the 		following:
 
 		[description if the file]
-		[strain identifier] [fraction of detected geenetic markers] [list, containing coverage of 				each genetic marker] [value if privilege]
+		[strain identifier] [fraction of detected geenetic markers] [list, containing coverage of each genetic marker] [value if privilege]
