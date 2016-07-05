@@ -93,18 +93,18 @@ gene_coverage.txt – summary of mapping metagenomic reads to genetic markers. F
 test_results.txt – file contains summary of analysis: list of strains, that has at least one detected 			genetic marker, and information of mapping metagenomic reads to genetic markers. 			Format of the file is the following:
 
 		[identifier of strain]
-		\t[identifier of genetic marker] [number of positions in genetic marker that are covered 			by metagenomic reads]
-		\t\t read name: [identifier of aligned read]
-		\t\t position in marker: [position in genetic marker where read was mapped]
-		\t\t CIGAR: [CIGAR representation of read mapping, that is extracted from .sam file]
-		\t\t detected positions (valuable SNPs, deletions and insertions): [list of positions in 			genetic marker, that are essential for distinguishing it from other homogeneous genetic 			markers and are covered by metagenomic reads]
+		[identifier of genetic marker] [number of positions in genetic marker that are covered 			by metagenomic reads]
+		read name: [identifier of aligned read]
+		position in marker: [position in genetic marker where read was mapped]
+		CIGAR: [CIGAR representation of read mapping, that is extracted from .sam file]
+		detected positions (valuable SNPs, deletions and insertions): [list of positions in 			genetic marker, that are essential for distinguishing it from other homogeneous genetic 			markers and are covered by metagenomic reads]
 
 test_results_short.txt – shortened version of results of the analysis. Format of the file os the 			following:
 
 		[identifier of strain]
-		\t[identifier of genetic marker] [number of positions in genetic marker that are covered 			by metagenomic reads]
-		\t\t number of reads: [number of reads that are mapped with genetic marker]
-		\t\t detected val. pos.: [list of positions in genetic marker, that are essential for 				distinguishing it from other homogeneous genetic markers and are covered by 				metagenomic reads]
+		 [identifier of genetic marker] [number of positions in genetic marker that are covered 			by metagenomic reads]
+		  number of reads: [number of reads that are mapped with genetic marker]
+		  detected val. pos.: [list of positions in genetic marker, that are essential for 				distinguishing it from other homogeneous genetic markers and are covered by 				metagenomic reads]
 
 gene_matrix.txt – file represent distinguishability of genetic markers based of their coverage by 		metagenomic reads.  Distinguishability is written in form of matrix, where each column 			and each string represent one of detected genetic markers. If element a(i,j) is 1 then i’th 			genetic marker (in i’th string) is indistinguishable from j’th genetic marker (in j’th 			column), 0 means that it is distinguishable. Format of the file is the following:
 
@@ -121,7 +121,7 @@ privilege.txt – summary of distinguishability of strains. All strains are grou
 		[strain identifier]: [value of privelege]
 		groups of strains are separated by new line symbol;
 
-	summary.txt – summary of analyses. File contains data of privilege values and additional 			information about number of detected genes and their coverage. Format of the file is the 		following:
+summary.txt – summary of analyses. File contains data of privilege values and additional 			information about number of detected genes and their coverage. Format of the file is the 		following:
 
 		[description if the file]
 		[strain identifier] [fraction of detected geenetic markers] [list, containing coverage of 				each genetic marker] [value if privilege]
