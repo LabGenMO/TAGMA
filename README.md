@@ -69,13 +69,13 @@ blast/all_to_all.txt,  blast/all_to_all.xml – results of all-over-all blast al
 genes_vs_genes_differences.txt – summary from all-over-all blast, contains differences of 			genetic markers, if aligned parts of the sequences are identical, nothing is reported. 			Format of the file is the following:
 
 		[ID of query from blast output]
-		\t[ID of subject from blast output]
-		\t\t snps:
-		\t\t\t [position of mismatch in genetic marker] [letter in query]->[letter in subject]
-		\t\t insertions:
-		\t\t\t [position of insertion in query] [letter that was inserted]
-		\t\t deletions:
-		\t\t\t [position of insertion in query] [letter that was deleted]
+		 [ID of subject from blast output]
+		  snps:
+		[position of mismatch in genetic marker] [letter in query]->[letter in subject]
+		  insertions:
+		[position of insertion in query] [letter that was inserted]
+		  deletions:
+		[position of insertion in query] [letter that was deleted]
 
 genes_snp_ins_positions.txt – summary of all-over-all blast, contains information about 				positions of SNPs and insertions in genetic markers. This positions are significant for 			distinguishing of homogeneous markers. Format of the file is the following:
 
