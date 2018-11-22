@@ -15,11 +15,11 @@ TAGMA makes strain level profiling of metagenome. Initially it is developed for 
 program requires installation of Biopython extension for python and presence of BLAST Command Lines Applications and bowtie2 in system PATH.
 
 Help information about program can be obtained in commandline by typing
-'''
+```
 python toximet.py --help
-'''
+```
 Arguments of the commandline:
-
+```
 toximet.py [-h] [-marf MARKERS_FILE] [-metaf METAGENOME_FILE]
                   [-out_fol OUTPUT_FOLDER] [--nproc N]
                   [--bt2_ps BowTie2_presets] [--evalue E-value]
@@ -39,20 +39,20 @@ additional arguments:
 -max_err – mismatch threshold for mapping metagenomic reads. Algorithm track all alignments of reads and filters out alignments that exceed specified number of mismatches (default value is 4).
 -val_pos_mismatch – mismatch threshold for valuable positions. Valuable positions are such positions in sequence of genetic marker, that distinguish homogenious sequences (default value is 0).
 -gene_cov – threshold for coverage of genetic markers by metagenomic reads. If genetic marker has less number of positions covered by metagenomic reads, it is not reported as detected sequence in metagenomic sample (default value is 20).
+```
 
-
-Input files and their format:
+##### Input files and their format: #####
 
 fasta file with genetic markers. Identifier of each sequence should be provided in special format. It should contain information about strain to which it is assigned. Identifiers should not contain spaces.
 Format of the file is the following:
-
+```
 >[identifier of strain]~[identifier of marker]
 [sequence of marker] 
-
+```
 fastq file with reads of 
 metagenomic sample, both single end and paired end reads can be used, configuration of mapping can be provided exactly in bowtie2 format.
 
-Output files
+###### Output files #####
 All output of the program is stored in folder that is specified in command line arguments and created in current working directory.
 
 tree.txt – file contains list of strains and list of genetic markers, that are assigned to each strain. 			This information is extracted from .fasta file, that is provided by user (see description of 		fasta file). Format of the file is the following:
