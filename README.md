@@ -127,3 +127,5 @@ All output of the program is stored in folder that is specified in command line 
 		[description if the file]
 		[strain identifier] [fraction of detected geenetic markers] [list, containing coverage of each genetic marker] [value if privilege]
 ```
+
+TAGMA requires to run a computer with amd64 compatible processor and minimum 4 GB RAM. Software have tested only on Linux-based operating systems. 
