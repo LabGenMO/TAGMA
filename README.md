@@ -127,5 +127,14 @@ All output of the program is stored in folder that is specified in command line 
 		[description if the file]
 		[strain identifier] [fraction of detected geenetic markers] [list, containing coverage of each genetic marker] [value if privilege]
 ```
+##### System requirements #####
 
 TAGMA requires to run a computer with amd64 compatible processor and minimum 4 GB RAM. Software have tested only on Linux-based operating systems. 
+
+##### Testing sample #####
+
+Test run can be started by using this command from root deployment directory:
+```
+	./test.sh
+```
+After processing of test sample, you will find results in output directory. The contents of this directory should be identical to the contents of the "test_output" directory.
