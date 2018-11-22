@@ -1,0 +1,11 @@
+Bifidobacterium longum subsp. longum KACC 91563
+		BLNIAS_01181_relB  0
+		BLNIAS_01106_relB  231
+			read name: SRR3724036.19734
+			position in marker: 1..232
+			CIGAR: 19S231M
+			detected positions (valuable SNPs, deletions and insertions): 87 114 144 168 179 193 216 217 228
+
+		BLNIAS_01182_mazF  0
+		BLNIAS_01950_relE  0
+

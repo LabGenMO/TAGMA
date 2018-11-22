@@ -1,0 +1,14 @@
+Bifidobacterium longum subsp. longum KACC 91563
+		BLNIAS_01181_relB  0
+			number of reads: 0
+			detected val. pos.: 
+		BLNIAS_01106_relB  231
+			number of reads: 1
+			detected val. pos.: 87 114 144 168 179 193 216 217 228
+		BLNIAS_01182_mazF  0
+			number of reads: 0
+			detected val. pos.: 
+		BLNIAS_01950_relE  0
+			number of reads: 0
+			detected val. pos.: 
+
