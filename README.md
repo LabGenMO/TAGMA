@@ -1,15 +1,15 @@
-TAGMA version 1.0
-Metagenomic strain profiling based on toxin-antitoxin gene systems
+**TAGMA version 1.0
+Metagenomic strain profiling based on toxin-antitoxin gene systems**
 
 
 TAGMA makes strain level profiling of metagenome. Initially it is developed for analysis of Bifidabacterium and Lactobacillus strains and use of toxin-antitoxin genes as genetic markers. But algorithm can be used for other strains and genes since they are provided properly in input file.
 
 Dependencies:
 
-Python 2.7.11
-Biopython 1.66
-BLAST Command Lines Applications 2.4.0
-bowtie2 2.2.9
+Python 2.7.11(last version of python can be downloaded from (https://www.python.org/downloads/) )
+Biopython 1.66(can be downloaded from (https://biopython.org/wiki/Download))
+BLAST Command Lines Applications 2.4.0(can be downloaded from ftp://ftp.ncbi.nih.gov/blast/executables/igblast/release/LATEST)
+bowtie2 2.2.9 (can be downloaded from http://bowtie-bio.sourceforge.net/bowtie2/index.shtml)
 
 USAGE:
 program requires installation of Biopython extension for python and presence of BLAST Command Lines Applications and bowtie2 in system PATH.
