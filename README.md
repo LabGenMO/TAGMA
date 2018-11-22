@@ -129,7 +129,7 @@ All output of the program is stored in folder that is specified in command line 
 ```
 ##### System requirements #####
 
-TAGMA requires to run a computer with amd64 compatible processor and minimum 4 GB RAM. Software have tested only on Linux-based operating systems. 
+TAGMA requires to run a computer with amd64 compatible processor and minimum 4 GB RAM. Software have tested only on Linux-based operating systems. To process 100 000 reads with using one-thread computer TAGMA takes ~8 seconds.  
 
 ##### Testing sample #####
 
