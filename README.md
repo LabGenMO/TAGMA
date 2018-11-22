@@ -52,23 +52,23 @@ Format of the file is the following:
 fastq file with reads of 
 metagenomic sample, both single end and paired end reads can be used, configuration of mapping can be provided exactly in bowtie2 format.
 
-###### Output files #####
+##### Output files #####
 All output of the program is stored in folder that is specified in command line arguments and created in current working directory.
 
-tree.txt – file contains list of strains and list of genetic markers, that are assigned to each strain. 			This information is extracted from .fasta file, that is provided by user (see description of 		fasta file). Format of the file is the following:
-
+** tree.txt ** – file contains list of strains and list of genetic markers, that are assigned to each strain.This information is extracted from .fasta file, that is provided by user (see description of fasta file). Format of the file is the following:
+```
 		[identifier of the strain]: [genenetic marker id 1],[genenetic marker id 2]...
+```
+** markers.fasta ** – fasta file with genetic markers. Does not contain identifiers of strains (unlike fasta file that is provided by user) in identifier line. Used for following analyses in all-over-all blast and mapping of metagenomic reads;
 
-markers.fasta – fasta file with genetic markers. Does not contain identifiers of strains (unlike 			fasta file that is provided by user) in identifier line. Used for following analyses in all-			over-all blast and mapping of metagenomic reads;
+** blast folder ** – contains results of all over all blast alignment. 
 
-blast folder – contains results of all over all blast alignment. 
+** blast/db ** – supplementary data for alignment, indexing of sequences that is made with dustmasker program – part of BLAST Command Line Tools;
 
-blast/db – supplementary data for alignment, indexing of sequences that is made with 				dustmasker program – part of BLAST Command Line Tools;
+** blast/all_to_all.txt,  blast/all_to_all.xml ** – results of all-over-all blast alignment, .xml file is used by algorithm of derive differences between genetic markers, .txt file is supplemental and is created for visualization of results and can be used for additional control of results by user; evalue threshold for alignment is specified by user as one of the command line arguments (default value is 10-30);
 
-blast/all_to_all.txt,  blast/all_to_all.xml – results of all-over-all blast alignment, .xml file is used 		by algorithm of derive differences between genetic markers, .txt file is supplemental and 		is created for visualization of results and can be used for additional control of results by 			user; evalue threshold for alignment is specified by user as one of the command line 			arguments (default value is 10-30);
-
-genes_vs_genes_differences.txt – summary from all-over-all blast, contains differences of 			genetic markers, if aligned parts of the sequences are identical, nothing is reported. 			Format of the file is the following:
-
+** genes_vs_genes_differences.txt ** – summary from all-over-all blast, contains differences of genetic markers, if aligned parts of the sequences are identical, nothing is reported. Format of the file is the following:
+```
 		[ID of query from blast output]
 		 [ID of subject from blast output]
 		  snps:
@@ -77,16 +77,16 @@ genes_vs_genes_differences.txt – summary from all-over-all blast, contains dif
 		[position of insertion in query] [letter that was inserted]
 		  deletions:
 		[position of insertion in query] [letter that was deleted]
-
-genes_snp_ins_positions.txt – summary of all-over-all blast, contains information about 				positions of SNPs and insertions in genetic markers. This positions are significant for 			distinguishing of homogeneous markers. Format of the file is the following:
-
+```
+** genes_snp_ins_positions.txt ** – summary of all-over-all blast, contains information about positions of SNPs and insertions in genetic markers. This positions are significant for distinguishing of homogeneous markers. Format of the file is the following:
+```
 		[ID of genetic marker]: [list of positions of SNPs and insertions]
-	
-bowtie2_db folder – contains supplementary files for mapping metagenomic reads, indexing 			of sequences with bowtie2-build program;
+```	
+** bowtie2_db folder ** – contains supplementary files for mapping metagenomic reads, indexing 	of sequences with bowtie2-build program;
 
-bt2_filtered.sam – SAM file containing results of mapping of metagenomic reads to genetic 			markers. All alignments that exceed threshold of mismatches along all alignment or 			threshold of mismatches in positions that distinguish genetic markers from each other 			(this positions are defined by all-over-all blast) are filtered out. Value of maximal 			mismatches along all alignment is specified by user as one of command line arguments 			(-max_err), default value is 4.  Value of maximal mismatches in positions that 				distinguish genetic markers from each other is specified by user as one of command line 		arguments (-val_pos_mismatch), default value is zero;
+** bt2_filtered.sam ** – SAM file containing results of mapping of metagenomic reads to genetic markers. All alignments that exceed threshold of mismatches along all alignment or threshold of mismatches in positions that distinguish genetic markers from each other (this positions are defined by all-over-all blast) are filtered out. Value of maximal 	mismatches along all alignment is specified by user as one of command line arguments (-max_err), default value is 4.  Value of maximal mismatches in positions that distinguish genetic markers from each other is specified by user as one of command line arguments (-val_pos_mismatch), default value is zero;
 
-gene_coverage.txt – summary of mapping metagenomic reads to genetic markers. File contains 			information about coverage of genetic markers by metagenomic reads. Format of the file 		is the following:
+** gene_coverage.txt ** – summary of mapping metagenomic reads to genetic markers. File contains 			information about coverage of genetic markers by metagenomic reads. Format of the file 		is the following:
 
 		[identifier of genetic marker]
 		[position]: [aligned letter] – [number of alignments]
