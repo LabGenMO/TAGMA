@@ -138,3 +138,7 @@ Test run can be started by using this command from root deployment directory:
 	./test.sh
 ```
 After processing of test sample, you will find results in output directory. The contents of this directory should be identical to the contents of the "test_output" directory.
+
+##### Forming a compilation of known genes of listed TASs type II superfamilies MazEF and RelBE in Lactobacillus rhamnosus, L. casei, L. helveticus, L. plantarum, Bifidobacterium longum #####
+
+We identified homologous regions in all complete genomes of Bifidobacterium (53 complete genomes) and Lactobacillus (72 complete genomes) (data available in NCBI(http://www.ncbi.nlm.nih.gov/genome)), located open reading frames and checked for proteins corresponding to annotated genes. Homologous sequences were identified with TBLASTX aligner with e-value threshold 10-20, protein coding reading frames were predicted with GeneMarkS algorithm (http://exon.gatech.edu/GeneMark/), whereas protein sequences were assessed with InterPro(http://www.ebi.ac.uk/interpro/). For target regions we adopted those in which homologous sequence overlapped with gene predicted by GeneMakrS for more than 80%. We considered only TASs located at chromosomes only, not at plasmids.
